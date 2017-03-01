@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtsTool", "OtsTool\OtsTool.csproj", "{C9E6A15B-5EF8-427D-83EB-C15655F4C2C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisTool", "RedisTool\RedisTool.csproj", "{B2AA35A3-359F-45DD-9D4E-B35A7A5E539A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9E6A15B-5EF8-427D-83EB-C15655F4C2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E6A15B-5EF8-427D-83EB-C15655F4C2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E6A15B-5EF8-427D-83EB-C15655F4C2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E6A15B-5EF8-427D-83EB-C15655F4C2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2AA35A3-359F-45DD-9D4E-B35A7A5E539A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2AA35A3-359F-45DD-9D4E-B35A7A5E539A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2AA35A3-359F-45DD-9D4E-B35A7A5E539A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2AA35A3-359F-45DD-9D4E-B35A7A5E539A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
