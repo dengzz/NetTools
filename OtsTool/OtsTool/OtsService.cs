@@ -33,8 +33,8 @@ namespace OtsTool
             var describeTableResponse = m_OTSClient.Value.DescribeTable(describeTableRequest);
             var primaryKeySchema = describeTableResponse.TableMeta.PrimaryKeySchema;
             var rangeRowQueryCriteria = new RangeRowQueryCriteria(tableName);
-            rangeRowQueryCriteria.InclusiveStartPrimaryKey = CreateGetRangePrimaryKey(primaryKeySchema, ColumnValue.INF_MIN, primaryKeys.Item1);
-            rangeRowQueryCriteria.ExclusiveEndPrimaryKey = CreateGetRangePrimaryKey(primaryKeySchema, ColumnValue.INF_MAX, primaryKeys.Item2);
+            rangeRowQueryCriteria.InclusiveStartPrimaryKey = CreateGetRangePrimaryKey(primaryKeySchema, ColumnValue.INF_MIN, primaryKeys?.Item1);
+            rangeRowQueryCriteria.ExclusiveEndPrimaryKey = CreateGetRangePrimaryKey(primaryKeySchema, ColumnValue.INF_MAX, primaryKeys?.Item2);
             if (columnNames?.Any() ?? false)
             {
                 rangeRowQueryCriteria.SetColumnsToGet(new HashSet<string>(columnNames));
@@ -62,7 +62,7 @@ namespace OtsTool
             var primaryKey = new PrimaryKey();
             foreach (var item in primaryKeySchema)
             {
-                if (userColumnValues.ContainsKey(item.Item1))
+                if (userColumnValues?.ContainsKey(item.Item1) ?? false)
                 {
                     primaryKey.Add(item.Item1, userColumnValues[item.Item1]);
                 }
