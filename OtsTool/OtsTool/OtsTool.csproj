@@ -200,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="cmd.log" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
