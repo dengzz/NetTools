@@ -25,8 +25,33 @@ namespace OtsTool
             {
                 workbook = new HSSFWorkbook();
             }
-            var sheet = workbook.GetSheet(sheetName) ?? workbook.CreateSheet(sheetName);
-            var rowIndex = GetLastRowNum(sheet);
+            var sheetNumber = 0;
+            var rowIndex = 0;
+            ISheet sheet;
+            while (true)
+            {
+                sheet = workbook.GetSheet(sheetName + sheetNumber);
+                if (sheet != null)
+                {
+                    rowIndex = GetLastRowNum(sheet);
+                    if (rowIndex >= 65535)
+                    {
+                        rowIndex = 0;
+                        sheetNumber++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                else
+                {
+                    sheet = workbook.CreateSheet(sheetName + sheetNumber);
+                    rowIndex = 0;
+                    break;
+                }
+
+            }
             if (rowIndex == 0)
             {
                 sheet.CreateRow(rowIndex++);
@@ -45,6 +70,17 @@ namespace OtsTool
                     SetCellValue(row, columnData, columnIndex, columnNames);
                 }
                 rowIndex++;
+                if (rowIndex >= 65535)
+                {
+                    rowIndex = 0;
+                    sheetNumber++;
+                    sheet = workbook.GetSheet(sheetName + sheetNumber) ?? workbook.CreateSheet(sheetName + sheetNumber);
+                    rowIndex = GetLastRowNum(sheet);
+                    if (rowIndex == 0)
+                    {
+                        sheet.CreateRow(rowIndex++);
+                    }
+                }
             }
             using (var fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
             {

@@ -1,7 +1,7 @@
 #RedisTool
 
-调用例子
+璋冪敤渚嬪瓙
 
-批量删除
+鎵归噺鍒犻櫎
 
 RedisTool.exe -h localhost:32768 -s X*

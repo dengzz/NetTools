@@ -9,6 +9,7 @@ namespace OtsTool
     {
         static void Main(string[] args)
         {
+            //args = "-t search_log_idc -f search_log_idc.xls -p _Project:LieBiDe".Split(' ');
             try
             {
                 var endpoint = ConfigurationManager.AppSettings["TableStore:Endpoint"];

@@ -1,19 +1,19 @@
 #OtsTool
 
-µ÷ÓÃÀı×Ó
+è°ƒç”¨ä¾‹å­
 
-×îĞ¡»¯²ÎÊıµ÷ÓÃ
+æœ€å°åŒ–å‚æ•°è°ƒç”¨
 
 OtsTool.exe -t table_name -f file_name.xls
 
-µ¼³öÄ³Ğ©ÁĞ
+å¯¼å‡ºæŸäº›åˆ—
 
-OtsTool.exe -t table_name -f file_name.xls -c ÁĞÃû1[:ÁĞÀàĞÍ1],ÁĞÃû2,ÁĞÃû3[,...],ÁĞÃûn
+OtsTool.exe -t table_name -f file_name.xls -c åˆ—å1[:åˆ—ç±»å‹1],åˆ—å2,åˆ—å3[,...],åˆ—ån
 
 OtsTool.exe -t table_name -f file_name.xls -c _Project,_Category,_Id,_CreatDate:DateTime,Keywords,PageIndex,PageSize
 
-Ö÷¼üÉ¸Ñ¡
+ä¸»é”®ç­›é€‰
 
-OtsTool.exe -t table_name -f file_name.xls -p Ö÷¼ü1:×îĞ¡Öµ1[:×î´óÖµ2],Ö÷¼ü2:¹Ì¶¨Öµ2
+OtsTool.exe -t table_name -f file_name.xls -p ä¸»é”®1:æœ€å°å€¼1[:æœ€å¤§å€¼2],ä¸»é”®2:å›ºå®šå€¼2
 
 OtsTool.exe -t table_name -f file_name.xls -p _Project:project_name1,_Category:category_name1,_Id:id10:id20
